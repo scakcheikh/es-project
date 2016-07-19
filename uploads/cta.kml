@@ -1,0 +1,12 @@
+var control = document.getElementById("kmlfile");
+control.addEventListener("change", function(event) {
+    var i = 0,
+    files = control.files,
+    len = files.length;
+
+    for (; i < len; i++) {
+        console.log("Filename: " + files[i].name);
+        console.log("Type: " + files[i].type);
+        console.log("Size: " + files[i].size + " bytes");
+    }
+}, false);
